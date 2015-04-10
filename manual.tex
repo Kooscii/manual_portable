@@ -3,6 +3,7 @@
 \usepackage{bm}
 \usepackage{sidecap}
 \usepackage{tabularx}
+% \usepackage{hyperref}
 \usepackage[margin=1in]{geometry}
 
 
@@ -17,7 +18,15 @@
 \subsubsectionfont{\fontsize{12}{14.4}\selectfont}
 
 \title{\textbf{ 
-        \LARGE {The Operation Manual for} \\
+        \Large {The Operation Manual for} \\ 
+         \vspace {10pt}
+          \Huge {P$\bm{\mu}$SL 3D-Printer } \\
+           \vspace {10pt}
+           	\LARGE {in portable mode}	\\
+             \vspace {10pt}
+              \Large{(McKay 304)}
+               \vspace {20pt}
+              }}
 \author{\textit{Tianyu Gu} \\
 				\textit{Sicong Shan} \\
 				\textit{Bertoldi Group}}
@@ -32,6 +41,8 @@
 	 \includegraphics[width=400pt]{frontpic.jpg}
 	\clearpage
 
+	\tableofcontents 
+	\clearpage
 
 	\raggedright
 
@@ -74,7 +85,7 @@
 			 	Then image is able to projected on the sample holder fix on the linear stage next to the projector. 
 			 	A light barrier is set in front of the lens. It's used to block the optical path.
 			 	As the convex lens is well adjusted, it's strongly adviced not to adjust it again in general use. But if 
-			 	you have to, please see the appendix at the end of this manual.
+			 	you have to, please see the appendix \ref{sec:convex_lens_adjustment} at the end of this manual.
 			 \end{tabularx}
 			 \vspace{30pt}
 
@@ -83,18 +94,16 @@
 				\raisebox{-0.9\height}{\includegraphics[width=0.33\textwidth]{intro1-1-3.jpg}} &
 			 	The mirror rotate the main optical axis and let the image be just pojected on the sample 
 			 	holder. Note that the mirror should be placed in a specific distance in front of the lens. More details 
-			 	about this will be introduce in section 1.1.4. If you have to adjust the mirror, please see the appendix.
+			 	about this will be introduce in section \ref{sec:linear-stage}. If you have to adjust the mirror, please see the appendix \ref{sec:mirror_adjustment}.
 			 \end{tabularx}
 
 			\subsubsection{Linear Stage}\label{sec:linear-stage}
 			 \begin{tabularx}{\textwidth}{ cX }
 				\raisebox{-0.9\height}{\includegraphics[width=0.33\textwidth]{intro1-1-4.jpg}} &
-			 	The linear stage is also one of the most important part. There's a sample holder fixed on it. Rotate 
-			 	the knob clockwise can lower the stage and counterclockwise upper the stage. 
-
-			 	// TODO need to expand	
-
-			 	The \textbf{stage assembly} is \textit{stage} + \textit{base} + \textit{sample holder} + \textit{mirror}.
+			 	The linear stage is another core part. There's a sample holder fixed on it. Rotate the knob clockwise can 
+			 	lower the stage (as well as the sample holder) and counterclockwise upper the stage. The stage is fixed on 
+			 	a bign base and the mirror mentioned above is fixed on it too. So Let's define the \textit{stage assembly} 
+			 	as \textit{stage} + \textit{base} + \textit{sample holder} + \textit{mirror}. 
 
 			 \end{tabularx}
 			 \vspace{10pt}
@@ -245,5 +254,41 @@
 
 		% \subsection{Cleaning}\label{sec:cleaning}
 		% bla
+
+
+	\section{Appendix}\label{sec:appendix}
+		\subsection{Convex lens adjustment}\label{sec:convex_lens_adjustment}
+		 \begin{itemize}
+			\begin{tabularx}{\textwidth}{ Xc }
+		 	\item The knob X and knob Z can adjust the position of the convex lens in X, Z dimension as well as the rotation in 
+		 	X, Z axis. And the screw Y can adjust the lens' position in Y dimension. You should make sure that the lens is 
+		 	central and vertical with the main optical axis, which means it should be parallel and aligned with the imaging 
+		 	lens of the projector. The distance between convex and imaging lens will make sense to the imaging distance. 
+		 	&\raisebox{-\height}{\includegraphics[width=0.33\textwidth]{lens_adjust.jpg}}\\
+		 	\\
+		 	\end{tabularx}
+		 	 \end{itemize}
+			
+		\subsection{Mirror adjustment}\label{sec:mirror_adjustment}
+		\begin{itemize}
+			\begin{tabularx}{\textwidth}{ Xc }
+		 	\item The knob U, V, W can adjust the position and the rotation in three dimensions. First you should adjust the 
+		 	mirror coarsely and let the image projected on the sample holder. Not being in the center is OK, you can make 
+		 	fine adjustment in the next step. 
+		 	&\raisebox{-\height}{\includegraphics[width=0.33\textwidth]{mirror_adjustr.jpg}}\\
+		 	\\
+		 	\end{tabularx}
+
+		 	\begin{tabularx}{\textwidth}{ Xc }
+		 	\item Then you need to do the fine adjustment. The knob A can rotate the mirror and let the image move in Y axis. 
+		 	The knob B can rotate the mirror too and let the image move in X axis. So you just need to rotate the knob and 
+		 	make the image pojected in the center of the sample holder. 
+		 	&\raisebox{-\height}{\includegraphics[width=0.33\textwidth]{mirror_adjust.jpg}}\\
+		 	\\
+		 	\end{tabularx}
+
+
+
+		 	\end{itemize}
 
 \end{document}
